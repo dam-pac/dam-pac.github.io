@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>animation</title>
 <link rel="stylesheet" href="styles.css">
-<bgsound src="background.mp3" loop="1" volume="1" balance="0" />
+<bgsound src="background.mp3" loop="1" volume="100" balance="0" />
 </head>
 <body>
 
