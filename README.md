@@ -5,24 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>animation</title>
 <link rel="stylesheet" href="styles.css">
+<bgsound src="background.mp3" loop="1" volume="1" balance="0" />
 </head>
 <body>
 
 <div class="body"></div>
 
-<audio id="background-audio" loop>
-<source src="background.mp3" type="audio/mp3">
-Ваш браузер не поддерживает аудио-тег.
-</audio>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-const audio = document.getElementById('background-audio');
-audio.play().catch(error => {
-console.log('Автоматическое воспроизведение заблокировано. Нажмите, чтобы начать музыку.');
-});
-});
-</script>
 
 </body>
 </html>
