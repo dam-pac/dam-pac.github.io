@@ -14,20 +14,25 @@
         Ваш браузер не поддерживает аудио-тег.
     </audio>
 
-   <div onclick="startAudio()">Нажмите, чтобы начать музыку</div>
+   <div id="play-overlay"></div>
 
-<script>
-function startAudio() {
-let audio = new Audio('background.mp3');
-audio.loop = true;
-audio.play().catch(error => {
-console.log('Воспроизведение заблокировано');
-document.addEventListener('click', () => {
-audio.play();
-});
-});
-}
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('background-audio');
+            const playOverlay = document.getElementById('play-overlay');
+
+            audio.play().catch(error => {
+                console.log('Автоматическое воспроизведение заблокировано. Нажмите, чтобы начать музыку.');
+                playOverlay.style.display = 'block';
+
+                playOverlay.addEventListener('click', () => {
+                    audio.play();
+                    playOverlay.style.display = 'none';
+                });
+            });
+        });
+    </script>
+
 
 </body>
 </html>
